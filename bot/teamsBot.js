@@ -40,13 +40,13 @@ class TeamsBot extends TeamsActivityHandler {
           break;
         }
 
-        case "example": {
-          const response = await axios.get('https://catfact.ninja/fact'); // replace with your API endpoint
-          const responseData = response.data;
-          const card = cardTools.AdaptiveCards.declareWithoutData(responseData.fact).render();
-          await context.sendActivity({ attachments: [CardFactory.adaptiveCard(card)] });
-          break;
-        }
+        // case "example": {
+        //   const response = await axios.get('https://catfact.ninja/fact'); // replace with your API endpoint
+        //   const responseData = response.data;
+        //   const card = cardTools.AdaptiveCards.declareWithoutData(responseData.fact).render();
+        //   await context.sendActivity({ attachments: [CardFactory.adaptiveCard(card)] });
+        //   break;
+        // }
 
         case "cats": {
           try {
