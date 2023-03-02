@@ -1,0 +1,67 @@
+{
+    "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.14/MicrosoftTeams.schema.json",
+    "manifestVersion": "1.14",
+    "version": "1.0.0",
+    "id": "4bb8c421-6737-46c9-9f1d-30205394946d",
+    "packageName": "com.microsoft.teams.extension",
+    "developer": {
+        "name": "Teams App, Inc.",
+        "websiteUrl": "https://www.example.com",
+        "privacyUrl": "https://www.example.com/termofuse",
+        "termsOfUseUrl": "https://www.example.com/privacy"
+    },
+    "icons": {
+        "color": "resources/color.png",
+        "outline": "resources/outline.png"
+    },
+    "name": {
+        "short": "scrumBot-local-debug",
+        "full": "Full name for scrumBot-local-debug"
+    },
+    "description": {
+        "short": "Short description of scrumBot-local-debug",
+        "full": "Full description of scrumBot-local-debug"
+    },
+    "accentColor": "#FFFFFF",
+    "bots": [
+        {
+            "botId": "e6d6c785-6930-4be2-b015-32dddb7a1e7b",
+            "scopes": [
+                "personal",
+                "team",
+                "groupchat"
+            ],
+            "supportsFiles": false,
+            "isNotificationOnly": false,
+            "commandLists": [
+                {
+                    "scopes": [
+                        "personal",
+                        "team",
+                        "groupchat"
+                    ],
+                    "commands": [
+                        {
+                            "title": "welcome",
+                            "description": "Resend welcome card of this Bot"
+                        },
+                        {
+                            "title": "learn",
+                            "description": "Learn about Adaptive Card and Bot Command"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "composeExtensions": [],
+    "configurableTabs": [],
+    "staticTabs": [],
+    "permissions": [
+        "identity",
+        "messageTeamMembers"
+    ],
+    "validDomains": [
+        "84ab-182-73-163-98.ngrok.io"
+    ]
+}

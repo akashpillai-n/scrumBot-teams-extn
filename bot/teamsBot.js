@@ -3,6 +3,7 @@ const querystring = require("querystring");
 const { TeamsActivityHandler, CardFactory, TurnContext } = require("botbuilder");
 const rawWelcomeCard = require("./adaptiveCards/welcome.json");
 const rawLearnCard = require("./adaptiveCards/learn.json");
+const rawCatsCard = require("./adaptiveCards/cats.json")
 const cardTools = require("@microsoft/adaptivecards-tools");
 
 class TeamsBot extends TeamsActivityHandler {
@@ -40,13 +41,13 @@ class TeamsBot extends TeamsActivityHandler {
           break;
         }
 
-        // case "example": {
-        //   const response = await axios.get('https://catfact.ninja/fact'); // replace with your API endpoint
-        //   const responseData = response.data;
-        //   const card = cardTools.AdaptiveCards.declareWithoutData(responseData.fact).render();
-        //   await context.sendActivity({ attachments: [CardFactory.adaptiveCard(card)] });
-        //   break;
-        // }
+        case "example": {
+          const response = await axios.get('https://catfact.ninja/fact'); // replace with your API endpoint
+          const responseData = response.data;
+          const card = cardTools.AdaptiveCards.declareWithoutData(rawCatsCard).render();
+          await context.sendActivity({ attachments: [CardFactory.adaptiveCard(card)] });
+          break;
+        }
 
         case "cats": {
           try {
